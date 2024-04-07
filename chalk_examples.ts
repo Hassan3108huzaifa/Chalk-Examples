@@ -31,9 +31,14 @@ console.log(warning('Warning!'));
 
 console.log(error('Error!'), warning('Warning!'));
 
-// Using templates
+// Define the name
 const name = 'John';
-console.log(chalk`Hello, {bold.blue ${name}}!`);
+
+// Apply chalk styles directly to the string
+const formattedName = chalk.bold.blue(name);
+
+// Print the formatted string
+console.log(`Hello, ${formattedName}!`);
 
 // Nesting styles
 console.log(chalk.red('This is red', chalk.underline('and underlined')));
